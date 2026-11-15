@@ -1,0 +1,27 @@
+name: Meeting agenda
+description: Open it before each supervision meeting (by 11:00 the working day before).
+title: "Meeting YYYY-MM-DD"
+labels: ["meeting"]
+projects: ["xmai-lab/1"]
+body:
+  - type: textarea
+    id: completed
+    attributes:
+      label: Completed since the last meeting
+      description: Link the issues and PRs.
+    validations:
+      required: true
+  - type: textarea
+    id: discuss
+    attributes:
+      label: To discuss
+      description: Questions, blockers, results you want feedback on.
+    validations:
+      required: true
+  - type: textarea
+    id: next
+    attributes:
+      label: Planned for the next meeting
+      description: What you expect to finish. The agreed TODOs become Task issues after the meeting.
+    validations:
+      required: true

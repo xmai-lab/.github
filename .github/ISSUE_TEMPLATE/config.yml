@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: How we work
+    url: https://github.com/xmai-lab/onboarding
+    about: Branches, issues, pull requests and meetings in XMAI.

@@ -1,0 +1,32 @@
+name: Task
+description: A unit of work (anything that takes more than 5 minutes).
+title: "[Task] "
+labels: ["task"]
+projects: ["xmai-lab/1"]
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What should be true when this is done, in one or two sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of done
+      description: How we check it is finished (a result, a figure, a merged PR, a passing test).
+      placeholder: |
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: Deliverable
+      description: What you hand over (PR, notebook, plot, short report) and where it lives.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes and links
+      description: Papers, related issues, data, meeting where this was decided.
