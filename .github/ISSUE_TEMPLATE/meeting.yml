@@ -2,13 +2,14 @@ name: Meeting agenda
 description: Open it before each supervision meeting (by 11:00 the working day before).
 title: "Meeting YYYY-MM-DD"
 labels: ["meeting"]
+type: Meeting
 projects: ["xmai-lab/1"]
 body:
   - type: textarea
     id: completed
     attributes:
       label: Completed since the last meeting
-      description: Link the issues and PRs.
+      description: Link the issues and PRs. For each Experiment, say whether the Result section is filled in.
     validations:
       required: true
   - type: textarea

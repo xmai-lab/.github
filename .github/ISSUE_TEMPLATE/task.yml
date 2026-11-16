@@ -2,6 +2,7 @@ name: Task
 description: A unit of work (anything that takes more than 5 minutes).
 title: "[Task] "
 labels: ["task"]
+type: Task
 projects: ["xmai-lab/1"]
 body:
   - type: textarea

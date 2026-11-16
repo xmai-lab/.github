@@ -1,0 +1,55 @@
+name: Experiment
+description: Plan an experiment before you run it; fill in the result when it is done.
+title: "[Exp] "
+labels: ["experiment"]
+type: Experiment
+projects: ["xmai-lab/1"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill in the first three fields **before** launching the run, so we can agree on the plan in the meeting.
+        Never attach patient images, image crops or predictions drawn on images. Aggregate plots only (curves, confusion matrices, tables).
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis
+      description: What you expect to happen and why, in one or two sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: Setup
+      description: Dataset and split, model, config file in `configs/`, what changes compared to the baseline.
+      placeholder: |
+        - Data / split:
+        - Model:
+        - Config: configs/...
+        - Baseline it is compared with: #...
+    validations:
+      required: true
+  - type: textarea
+    id: metric
+    attributes:
+      label: Metric and success threshold
+      description: The number that decides the outcome and the value that counts as success.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Result
+      description: Fill in when the run is finished. Table of the main metrics, one or two aggregate plots, run folder on the cluster, git commit.
+      placeholder: |
+        | metric | baseline | this run |
+        |---|---|---|
+        |  |  |  |
+
+        - Run folder: outputs/<repo>/<YYYY-MM-DD>_<issue>_<slug>/
+        - Commit:
+  - type: textarea
+    id: conclusion
+    attributes:
+      label: Conclusion and next step
+      description: Was the hypothesis confirmed? What do you propose next?
